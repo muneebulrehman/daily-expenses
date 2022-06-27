@@ -1,0 +1,18 @@
+<div class="main-form section">
+  <h2>Create new Category</h2>
+  <%= form_with model: @category, url: new_users_categories_path, method: :post  do |f| %>
+    <div class="form">
+      <div class="field">
+        <%= f.label :name %><br />
+        <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+      </div>
+      <div class="field img-field">
+        <%= f.label :image %><br />
+        <%= f.file_field :image, autofocus: true, autocomplete: "name" %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Create Category", class:"primary-btn" %>
+      </div>
+    </div>
+  <% end %>
+</div>
