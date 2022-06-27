@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  devise_for :users do
+  devise_for :users
+  resource :users do
     resource :categories
     resource :items
   end
