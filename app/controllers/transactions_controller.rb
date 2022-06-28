@@ -2,7 +2,7 @@ class TransactionsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @transactions = Transaction.where(user_id: current_user.id and category_id: category_id).order(created_at: :desc)
+    @transactions = Transaction.where(user_id: current_user.id, category_id: category_id).order(created_at: :desc)
   end
 
   def show

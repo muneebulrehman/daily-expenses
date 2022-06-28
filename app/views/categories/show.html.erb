@@ -1,1 +1,8 @@
-<h2> <%= @category.name %> </h2>
+<div class="section">
+  <h2> <%= @category.name %> </h2>
+  <% @category.all_transactions.each do |transaction| %>
+    <h3> <%= transaction.name %> </h3>
+    <p> <%= transaction.amount %> </p>
+    <p> <%= transaction.created_at %> </p>
+  <% end %>
+</div>
