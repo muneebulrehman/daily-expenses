@@ -319,7 +319,7 @@ body {
   gap: 1rem;
   justify-content: center;
   align-items: center;
-  padding: 2rem 1rem;
+  padding: 1rem;
   background-color: var(--clr-secondary);
   color: var(--clr-text);
   border-radius: 8px;
@@ -344,4 +344,15 @@ body {
 
 .transaction-details p {
   font-size: 1.25rem;
+}
+
+.message {
+  padding: 2rem;
+  font-size: 1.25rem;
+}
+
+@media screen and (min-width: 768px) {
+  .each-transaction {
+    padding: 2rem 1rem;
+  }
 }
