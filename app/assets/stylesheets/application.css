@@ -301,19 +301,25 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-bottom: 3rem;
   justify-content: center;
   align-items: center;
+}
+
+.cat-show h2 {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  background: var(--clr-primary);
+  color: #fff;
+  border-radius: 8px;
 }
 
 .each-transaction {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-bottom: 3rem;
   justify-content: center;
   align-items: center;
-  padding: 3rem 1.5rem;
+  padding: 2rem 1rem;
   background-color: var(--clr-secondary);
   color: var(--clr-text);
   border-radius: 8px;
@@ -321,10 +327,21 @@ body {
 }
 
 .transaction-heading {
+  width: 100%;
   display: flex;
-  gap: 3rem;
+  justify-content: space-between;
 }
 
 .transaction-heading h3 {
   font-size: 1.5rem;
+}
+
+.transaction-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.transaction-details p {
+  font-size: 1.25rem;
 }
