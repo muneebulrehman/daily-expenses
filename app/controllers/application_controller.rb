@@ -7,9 +7,9 @@ class ApplicationController < ActionController::Base
     new_user_session_path
   end
   
-  def after_sign_in_path_for(*)
-    new_users_categories_path
-  end
+  # def after_sign_in_path_for(*)
+  #   user_categories_path(current_user.id)
+  # end
 
   def after_sign_up_path_for(*)
   end

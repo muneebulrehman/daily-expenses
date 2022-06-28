@@ -1,6 +1,6 @@
 <div class="main-form section">
   <h2>Create new Category</h2>
-  <%= form_with model: @category, url: users_categories_path, method: :post  do |f| %>
+  <%= form_with model: @category, url: user_categories_path(current_user.id), method: :post  do |f| %>
     <div class="form">
       <div class="field">
         <%= f.label :name %><br />

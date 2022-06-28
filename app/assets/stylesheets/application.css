@@ -37,6 +37,39 @@ body {
   background-color: whitesmoke;
 }
 
+.notification {
+  /* padding: 0.5rem; */
+  text-align: center;
+  width: fit-content;
+  margin: 0.25rem auto 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 10%;
+  z-index: 999;
+  opacity: 0.9;
+  animation: cssAnimation 0s 4s forwards;
+}
+
+@keyframes cssAnimation {
+  to {
+    visibility: hidden;
+  }
+}
+
+.success {
+  background-color: rgb(145, 255, 145);
+}
+
+.alert {
+  background-color: rgb(243, 247, 117);
+}
+
+.error {
+  background-color: rgb(255, 98, 98);
+}
+
 .home-container {
   text-align: center;
   padding: 4rem 2rem;
@@ -180,6 +213,10 @@ body {
     font-size: 1.85rem;
   }
 
+  .section {
+    padding: 4rem 6rem;
+  }
+
 }
 
 .primary-btn {
@@ -222,4 +259,40 @@ body {
 .img-field {
   display: flex;
   align-items: center;
+}
+
+.all-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.each-category {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+  border-radius: 6px;
+  min-width: 18rem;
+}
+
+.each-category h4 {
+  font-size: 1rem;
+  color: var(--clr-text)
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+  border-radius: 4px;
+}
+
+.heading {
+  text-align: center;
+  padding: 2rem;
+  color: var(--clr-text);
 }
