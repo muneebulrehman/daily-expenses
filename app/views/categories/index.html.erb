@@ -8,8 +8,10 @@
       <% @categories.each do |category|%>
         <%= link_to user_category_path(current_user.id, category.id) do %>
           <div class="each-category">
-            <%= image_tag url_for(category.icon), class:"icon" %>
-            <h4> <%= category.name %> </h4>
+            <div class="each-category-header">
+              <%= image_tag url_for(category.icon), class:"icon" %>
+              <h4> <%= category.name %> </h4>
+            </div>
             <p> <%= category.sum_of_transactions %>₹</p>
           </div>
         <% end %>

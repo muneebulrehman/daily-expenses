@@ -1,4 +1,3 @@
-<%= link_to 'Back', :back %>
 <div class="cat-show section">
   <h2 class="heading"> <%= @category.name %> </h2>
   <%= link_to "Create new transaction", new_user_category_transaction_path(current_user.id, @category.id), class:"primary-btn"  %>
@@ -7,8 +6,9 @@
       <div class="each-transaction">
         <div class="transaction-heading">
           <%= image_tag url_for(@category.icon), class:"icon" %>
-          <h3> <%= transaction.name %> </h3>
+          <h3> <%= @category.name %> </h3>
         </div>
+        <p> <%= transaction.name %> </p>
         <div class="transaction-details">
           <p>Payment: <%= transaction.amount %>₹ </p>
           <p> <%= transaction.created_at.strftime("%d %b %Y") %> </p>
