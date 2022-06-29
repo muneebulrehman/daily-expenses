@@ -1,13 +1,18 @@
-<div class="section">
+<div class="cat-index section">
   <h1 class="heading" >All your categories</h1>
-  <div class="all-categories">
-    <% @categories.each do |category|%>
-      <%= link_to user_category_path(current_user.id, category.id) do %>
-        <div class="each-category">
-          <%= image_tag url_for(category.icon), class:"icon" %>
-          <h4> <%= category.name %> </h4>
-        </div>
+  <%= link_to "Create new category", new_user_category_path(current_user.id), class:"primary-btn"  %>
+  <% if @categories.blank? %>
+    <p class="message" >No transactions yet!</p>
+  <% else %>
+    <div class="all-categories">
+      <% @categories.each do |category|%>
+        <%= link_to user_category_path(current_user.id, category.id) do %>
+          <div class="each-category">
+            <%= image_tag url_for(category.icon), class:"icon" %>
+            <h4> <%= category.name %> </h4>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>

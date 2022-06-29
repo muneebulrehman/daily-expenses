@@ -7,4 +7,8 @@ class Category < ApplicationRecord
   def all_transactions
     transactions
   end
+
+  def sum_of_transactions
+
+  end
 end
