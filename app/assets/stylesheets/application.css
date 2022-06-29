@@ -394,6 +394,11 @@ body {
   background: var(--clr-primary);
 }
 
+.big-text {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
 @media screen and (min-width: 768px) {
   .each-transaction {
     padding: 2rem 1rem;

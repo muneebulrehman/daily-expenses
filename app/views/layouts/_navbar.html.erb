@@ -4,6 +4,9 @@
       <% if request.path.include?'/categories/new' %>
         <%= link_to image_tag("leftarrow", class: "back-arrow"), 'javascript:history.back()' %>
         <p class="big-text">New Category</p>
+      <% elsif request.path.include?'/transactions/new' %>
+        <%= link_to image_tag("leftarrow", class: "back-arrow"), 'javascript:history.back()' %>
+        <p class="big-text">New transaction</p>
       <% elsif request.path.include?'/categories/' %>
         <%= link_to image_tag("leftarrow", class: "back-arrow"), 'javascript:history.back()' %>
         <p class="big-text">Transactions</p>
