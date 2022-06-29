@@ -1,7 +1,8 @@
 class CategoriesController < ApplicationController
   before_action :authenticate_user!
+  before_action :check_user
   def index
-    @categories = Category.all
+    @categories = Category.where(user_id: current_user.id)
   end
 
   def show
@@ -30,6 +31,13 @@ class CategoriesController < ApplicationController
       redirect_to user_categories_path(current_user.id)
     else
       render :edit
+    end
+  end
+
+  def check_user
+    if current_user != nil && current_user.id != params[:user_id].to_i
+      flash[:error] = 'You are not authorized to access this page'
+      redirect_to user_categories_path(current_user.id)
     end
   end
 

@@ -376,6 +376,24 @@ body {
   height: 1rem;
 }
 
+.logout-btn {
+  padding: .5rem 1rem;
+  background: var(--clr-secondary);
+  border-radius: 5px;
+}
+
+.logout-btn:hover {
+  cursor: pointer;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background: var(--clr-primary);
+}
+
 @media screen and (min-width: 768px) {
   .each-transaction {
     padding: 2rem 1rem;

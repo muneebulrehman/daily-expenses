@@ -2,7 +2,7 @@
   <h1 class="heading" >All your categories</h1>
   <%= link_to "Create new category", new_user_category_path(current_user.id), class:"primary-btn"  %>
   <% if @categories.blank? %>
-    <p class="message" >No transactions yet!</p>
+    <p class="message" >No categories found!</p>
   <% else %>
     <div class="all-categories">
       <% @categories.each do |category|%>

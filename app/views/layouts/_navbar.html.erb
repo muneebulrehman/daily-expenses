@@ -1,5 +1,19 @@
 <nav class="navbar">
-  <div class="container">
-    <%= link_to image_tag("leftarrow", class: "back-arrow"), :back %>
+  <div class="nav-container">
+    <% if user_signed_in? %>
+      <% if request.path.include?'/categories/new' %>
+        <%= link_to image_tag("leftarrow", class: "back-arrow"), 'javascript:history.back()' %>
+        <p class="big-text">New Category</p>
+      <% elsif request.path.include?'/categories/' %>
+        <%= link_to image_tag("leftarrow", class: "back-arrow"), 'javascript:history.back()' %>
+        <p class="big-text">Transactions</p>
+      <% else %>
+        <p></p>
+        <p class="big-text">Categories</p>
+      <% end %>
+      <div class="flex">
+        <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "logout-btn" %>
+      </div>
+    <% end %>
   </div>
 </nav>
