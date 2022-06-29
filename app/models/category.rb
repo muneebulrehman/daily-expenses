@@ -9,6 +9,6 @@ class Category < ApplicationRecord
   end
 
   def sum_of_transactions
-
+    transactions.sum(:amount)
   end
 end

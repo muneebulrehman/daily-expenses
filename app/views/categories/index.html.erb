@@ -10,6 +10,7 @@
           <div class="each-category">
             <%= image_tag url_for(category.icon), class:"icon" %>
             <h4> <%= category.name %> </h4>
+            <p> <%= category.sum_of_transactions %>₹</p>
           </div>
         <% end %>
       <% end %>

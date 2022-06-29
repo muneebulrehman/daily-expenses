@@ -12,7 +12,11 @@
  *
  *= require_tree .
  *= require_self
- */
+*/
+
+/*
+ *= require font-awesome
+*/
 
 :root {
   --clr-primary: #3778c2;

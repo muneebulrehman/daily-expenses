@@ -76,3 +76,5 @@ gem 'dotenv-rails'
 gem 'rubocop', '~> 1.30'
 
 gem "devise", "~> 4.8"
+
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
