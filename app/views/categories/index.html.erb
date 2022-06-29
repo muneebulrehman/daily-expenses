@@ -2,11 +2,12 @@
   <h1 class="heading" >All your categories</h1>
   <div class="all-categories">
     <% @categories.each do |category|%>
-      <div class="each-category">
-        <%= image_tag url_for(category.icon), class:"icon" %>
-        <h4> <%= category.name %> </h4>
-        <%= link_to "View expenses", user_category_path(current_user.id, category.id) %>
-      </div>
+      <%= link_to user_category_path(current_user.id, category.id) do %>
+        <div class="each-category">
+          <%= image_tag url_for(category.icon), class:"icon" %>
+          <h4> <%= category.name %> </h4>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>
