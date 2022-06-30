@@ -55,6 +55,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 6.0.0.rc1'
 
   gem 'ffi', '~> 1.9', '>= 1.9.10'
+
+  gem 'shoulda-matchers'
 end
 
 group :development do
