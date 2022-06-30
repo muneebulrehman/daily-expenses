@@ -10,7 +10,7 @@ class TransactionsController < ApplicationController
     @transaction.user = current_user
     @transaction.category_id = params[:category_id]
     if @transaction.save
-      flash[:success] = "Transaction created"
+      flash[:success] = 'Transaction created'
       redirect_to user_category_path(current_user, @transaction.category)
     else
       render :new
@@ -20,5 +20,4 @@ class TransactionsController < ApplicationController
   def transaction_params
     params.require(:transaction).permit(:name, :amount, :category_id)
   end
-
 end
