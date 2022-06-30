@@ -2,13 +2,13 @@
   <div class="nav-container">
     <% if user_signed_in? %>
       <% if request.path.include?'/categories/new' %>
-        <%= link_to image_tag("leftarrow", class: "back-arrow"), 'javascript:history.back()' %>
+        <%= link_to image_tag("leftarrow", class: "back-arrow"), 'javascript:history.back()', title: "Back" %>
         <p class="big-text">New Category</p>
       <% elsif request.path.include?'/transactions/new' %>
-        <%= link_to image_tag("leftarrow", class: "back-arrow"), 'javascript:history.back()' %>
+        <%= link_to image_tag("leftarrow", class: "back-arrow"), 'javascript:history.back()', title: "Back" %>
         <p class="big-text">New transaction</p>
       <% elsif request.path.include?'/categories/' %>
-        <%= link_to image_tag("leftarrow", class: "back-arrow"), 'javascript:history.back()' %>
+        <%= link_to image_tag("leftarrow", class: "back-arrow"), 'javascript:history.back()', title: "Back"  %>
         <p class="big-text">Transactions</p>
       <% else %>
         <p></p>
