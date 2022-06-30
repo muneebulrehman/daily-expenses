@@ -39,6 +39,8 @@ body {
   line-height: 1.5;
   font-size: 0.875rem;
   background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
 }
 
 .notification {
@@ -158,7 +160,8 @@ body {
 }
 
 .section {
-  padding: 2rem 4rem;
+  padding: 2rem 4rem 3rem;
+  margin-bottom: 3rem;
 }
 
 .main-form {
@@ -222,7 +225,7 @@ body {
   }
 }
 
-.primary-btn {
+/* .primary-btn {
   padding: 0.8em 1.8em;
   border: 2px solid #17c3b2;
   position: relative;
@@ -257,7 +260,7 @@ body {
 
 .primary-btn:hover {
   color: #111;
-}
+} */
 
 .img-field {
   display: flex;
@@ -413,6 +416,33 @@ body {
   margin: auto;
 }
 
+.primary-btn {
+  margin-top: auto;
+  padding: 2rem 0;
+  width: 100%;
+  background: var(--clr-secondary);
+  text-align: center;
+  margin: auto;
+  position: fixed;
+  top: 90%;
+}
+
+.primary-btn:hover {
+  cursor: pointer;
+}
+
+.create-btn {
+  padding: 1rem 3rem;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.ca-btn {
+  background: var(--clr-secondary);
+  padding: 1rem 3rem;
+  width: 100%;
+}
+
 @media screen and (min-width: 768px) {
   .each-transaction {
     padding: 2rem 1rem;
@@ -432,5 +462,10 @@ body {
     margin: auto;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+  }
+
+  .primary-btn {
+    width: 20rem;
+    left: 40%;
   }
 }

@@ -3,7 +3,6 @@
 </div>
 <div class="cat-show section">
   <h2 class="heading"> <%= @category.name %> </h2>
-  <%= link_to "Create new transaction", new_user_category_transaction_path(current_user.id, @category.id), class:"primary-btn"  %>
   <% if !@category.transactions.blank? %>
     <% @category.all_transactions.each do |transaction| %>
       <div class="each-transaction">
@@ -21,4 +20,7 @@
   <% else %>
     <p class="message" >No transactions yet!</p>
   <% end %>
+</div>
+<div class="primary-btn">
+  <%= link_to "Create new transaction", new_user_category_transaction_path(current_user.id, @category.id), class:"create-btn"  %>
 </div>
