@@ -23,7 +23,7 @@ RSpec.describe 'Specific category/transaction page', type: :system do
   it 'I can create new transactions for a category.' do
     click_link('Create new category')
     fill_in 'Name', with: 'Clothes'
-    attach_file('Icon', "#{Rails.root}spec/fixtures/meme.jpg")
+    attach_file('Icon', "#{Rails.root}/spec/fixtures/meme.jpg")
     find_button('Create Category').click
     expect(page).to have_content('Clothes')
     expect(page).to have_css('img')
