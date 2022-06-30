@@ -17,6 +17,8 @@
       <div class="flex">
         <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "logout-btn" %>
       </div>
+    <% else %>
+      <p class="big-text app-name"> Daily Expenses </p>
     <% end %>
   </div>
 </nav>

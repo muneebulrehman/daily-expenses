@@ -409,6 +409,10 @@ body {
   font-weight: bold;
 }
 
+.app-name {
+  margin: auto;
+}
+
 @media screen and (min-width: 768px) {
   .each-transaction {
     padding: 2rem 1rem;
