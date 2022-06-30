@@ -5,7 +5,7 @@ class Category < ApplicationRecord
   validates :name, presence: true
 
   def all_transactions
-    transactions
+    transactions.order(created_at: :desc)
   end
 
   def sum_of_transactions

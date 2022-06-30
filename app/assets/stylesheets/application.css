@@ -390,7 +390,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 3rem;
+  padding: 1rem;
   background: var(--clr-primary);
 }
 
@@ -398,6 +398,18 @@ body {
   font-size: 1.5rem;
   color: #fff;
 }
+
+.total-transc {
+  padding: .5rem 0;
+  text-align: center;
+  background: #fff;
+}
+
+.total-transc p {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
 
 @media screen and (min-width: 768px) {
   .each-transaction {
@@ -407,5 +419,16 @@ body {
   .back-arrow {
     width: 1.75rem;
     height: 1.75rem;
+  }
+
+  .nav-container {
+    padding: 1rem 3rem;
+  }
+
+  .total-transc {
+    max-width: 20rem;
+    margin: auto;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
   }
 }

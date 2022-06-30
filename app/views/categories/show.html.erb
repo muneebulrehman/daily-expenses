@@ -1,3 +1,6 @@
+<div class="total-transc">
+  <p>Spent on <%= @category.name %>: <%= @category.sum_of_transactions %>₹ </p>
+</div>
 <div class="cat-show section">
   <h2 class="heading"> <%= @category.name %> </h2>
   <%= link_to "Create new transaction", new_user_category_transaction_path(current_user.id, @category.id), class:"primary-btn"  %>
