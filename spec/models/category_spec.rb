@@ -1,11 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Category, type: :model do
-  subject { Category.new(name: "Fuel") }
-
-  before { subject.save }
-  it 'name should be present' do
-    subject.name = nil
-    expect(subject).to_not be_valid
-  end
+  it { should belong_to :user }
+  it { should validate_presence_of :name }
+  it { is_expected.to have_one_attached(:icon) }
 end
