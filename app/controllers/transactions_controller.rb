@@ -15,8 +15,8 @@ class TransactionsController < ApplicationController
     else
       render :new
     end
-    p "transaction params are"
-    puts 
+    p 'transaction params are'
+    puts
   end
 
   def transaction_params
